@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import remarkBreaks from 'remark-breaks'
 import example from './example.md';
 
 function App() {
@@ -63,7 +64,7 @@ class MarkdownComp extends React.Component {
               </button>
             </div>
             <div className='w-3/4'>
-              <p id='preview' className='text-black text-left prose max-w-none'><ReactMarkdown children={this.state.input} remarkPlugins={[remarkGfm]} /></p>
+              <p id='preview' className='text-black text-left prose max-w-none'><ReactMarkdown children={this.state.input} remarkPlugins={[remarkGfm, remarkBreaks]} /></p>
             </div>
           </div>
 
